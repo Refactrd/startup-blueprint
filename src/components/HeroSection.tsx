@@ -146,7 +146,7 @@ function ImageCollage() {
       <motion.div initial={{ opacity: 0, scale: 0.4 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1.0, duration: 0.4, ease: "backOut" }} className="absolute top-[3%] right-[2%] z-20 w-8 sm:w-10">
         <Star4 />
       </motion.div>
-      <motion.div initial={{ opacity: 0, scale: 0.4 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1.1, duration: 0.35, ease: "backOut" }} className="absolute top-[22%] right-[28%] z-20 w-3 sm:w-4">
+      <motion.div initial={{ opacity: 0, scale: 0.4 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1.1, duration: 0.35, ease: "backOut" }} className="absolute top-[3%] right-[28%] z-20 w-3 sm:w-4">
         <StarSolid />
       </motion.div>
       <motion.div initial={{ opacity: 0, scale: 0.4 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1.15, duration: 0.35, ease: "backOut" }} className="absolute top-[52%] left-[2%] z-20 w-3 sm:w-4">
