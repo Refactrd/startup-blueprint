@@ -36,7 +36,7 @@ interface Session {
 const COLOR: Record<SessionType, { bg: string; dot: string }> = {
   yellow: { bg: 'bg-[#FFF9E6]',  dot: 'bg-[#F5C518]' },
   purple: { bg: 'bg-[#F3EFFF]',  dot: 'bg-[#7C5CFC]' },
-  blue:   { bg: 'bg-[#EDF2FF]',  dot: 'bg-[#0147FF]' },
+  blue:   { bg: 'bg-[#EDF2FF]',  dot: 'bg-[#2D5AE3]' },
   peach:  { bg: 'bg-[#FFF0EC]',  dot: 'bg-[#FF6B4A]' },
   grey:   { bg: 'bg-[#F4F4F6]',  dot: 'bg-[#9E9EA8]' },
 }
