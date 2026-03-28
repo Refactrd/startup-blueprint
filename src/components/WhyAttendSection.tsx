@@ -107,7 +107,7 @@ function WhyCard({
         aria-hidden="true"
         style={{
           fontSize: 'clamp(140px, 18vw, 200px)',
-          background: 'linear-gradient(160deg, #0147FF 0%, #0035CC 60%, #001A88 100%)',
+          backgroundImage: 'linear-gradient(160deg, #2D5AE3 0%, #1E44C8 60%, #1233A8 100%)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',

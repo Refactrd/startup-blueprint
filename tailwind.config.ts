@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          blue: '#0147FF',
+          blue: '#2D5AE3',
           dark: '#1C1A1A',
           muted: '#DEDEE0',
           white: '#FFFFFF',

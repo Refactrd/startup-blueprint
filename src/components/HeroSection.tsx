@@ -46,7 +46,7 @@ function StarSolid({ className, color = "#FF3B30" }: { className?: string; color
 function Squiggle({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 60 40" fill="none" aria-hidden="true">
-      <path d="M4 20C10 8 18 32 26 20C34 8 42 32 50 20" stroke="#0147FF" strokeWidth="2.2" strokeLinecap="round" fill="none" />
+      <path d="M4 20C10 8 18 32 26 20C34 8 42 32 50 20" stroke="#2D5AE3" strokeWidth="2.2" strokeLinecap="round" fill="none" />
     </svg>
   );
 }
@@ -146,7 +146,7 @@ function ImageCollage() {
       <motion.div initial={{ opacity: 0, scale: 0.4 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1.0, duration: 0.4, ease: "backOut" }} className="absolute top-[3%] right-[2%] z-20 w-8 sm:w-10">
         <Star4 />
       </motion.div>
-      <motion.div initial={{ opacity: 0, scale: 0.4 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1.1, duration: 0.35, ease: "backOut" }} className="absolute top-[22%] right-[28%] z-20 w-3 sm:w-4">
+      <motion.div initial={{ opacity: 0, scale: 0.4 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1.1, duration: 0.35, ease: "backOut" }} className="absolute top-[3%] right-[28%] z-20 w-3 sm:w-4">
         <StarSolid />
       </motion.div>
       <motion.div initial={{ opacity: 0, scale: 0.4 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1.15, duration: 0.35, ease: "backOut" }} className="absolute top-[52%] left-[2%] z-20 w-3 sm:w-4">
@@ -171,17 +171,22 @@ export default function HeroSection() {
     <section className="relative min-h-screen w-full overflow-hidden bg-brand-dark">
       {/* Background */}
       <div className="pointer-events-none absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_55%,rgba(110,55,8,0.25),transparent_70%)]" />
+        {/* Centered bloom — unifies the whole composition */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[900px] rounded-full bg-brand-blue/[0.07] blur-[110px]" />
+        {/* Left glow — illuminates text content */}
         <motion.div
-          animate={shouldReduceMotion ? undefined : { opacity: [0.2, 0.4, 0.2], scale: [1, 1.05, 1] }}
+          animate={shouldReduceMotion ? undefined : { opacity: [0.18, 0.32, 0.18], scale: [1, 1.06, 1] }}
           transition={{ duration: 6, repeat: Infinity } as const}
-          className="absolute -bottom-32 -left-32 h-[500px] w-[500px] rounded-full bg-brand-blue/20 blur-[120px]"
+          className="absolute -bottom-16 -left-16 h-[520px] w-[520px] rounded-full bg-brand-blue/20 blur-[130px]"
         />
+        {/* Right glow — illuminates image collage */}
         <motion.div
-          animate={shouldReduceMotion ? undefined : { opacity: [0.15, 0.3, 0.15], scale: [1, 1.05, 1] }}
-          transition={{ duration: 7, repeat: Infinity } as const}
-          className="absolute -top-32 -right-32 h-[400px] w-[400px] rounded-full bg-brand-blue/20 blur-[100px]"
+          animate={shouldReduceMotion ? undefined : { opacity: [0.12, 0.22, 0.12], scale: [1, 1.06, 1] }}
+          transition={{ duration: 8, repeat: Infinity } as const}
+          className="absolute -top-16 right-[-5%] h-[480px] w-[480px] rounded-full bg-brand-blue/15 blur-[110px]"
         />
+        {/* Bottom edge fade for depth */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-brand-dark/60 to-transparent" />
       </div>
 
       {/* ─── MOBILE / TABLET layout (< lg) ─────────────────── */}
@@ -216,7 +221,7 @@ export default function HeroSection() {
 
           <motion.h1
             variants={fadeUp}
-            className="font-syne font-extrabold text-white leading-[0.95] tracking-tight text-[40px] sm:text-5xl md:text-6xl"
+            className="font-syne-new font-extrabold text-white leading-[0.95] tracking-tight text-[52px] sm:text-[68px] md:text-[76px]"
           >
             Startups{" "}
             <span className="text-brand-blue relative inline-block">
@@ -267,12 +272,12 @@ export default function HeroSection() {
 
           <motion.h1
             variants={fadeUp}
-            className="font-syne font-extrabold text-white leading-[0.95] tracking-tight text-[70px]"
+            className="font-syne-new font-extrabold text-white leading-[1] tracking-normal text-[96px]"
           >
             Startups{" "}
             <span className="text-brand-blue relative inline-block">
               Blueprint
-              <span className="absolute left-0 -bottom-1 w-full h-[3px] bg-brand-blue/40" />
+              <span className="absolute left-0 -bottom-1 w-full h-[10px] bg-brand-blue/40" />
             </span>{" "}
             '26
           </motion.h1>

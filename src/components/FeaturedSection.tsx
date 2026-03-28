@@ -100,7 +100,7 @@ export default function FeaturedSection() {
             <svg width="56" height="36" viewBox="0 0 56 36" fill="none">
               <path
                 d="M4 18C10 6 18 30 26 18C34 6 42 30 50 18"
-                stroke="#0147FF"
+                stroke="#2D5AE3"
                 strokeWidth="2.2"
                 strokeLinecap="round"
                 fill="none"

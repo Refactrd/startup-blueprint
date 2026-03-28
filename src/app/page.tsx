@@ -22,7 +22,6 @@ export default function HomePage() {
       <WhyAttendSection/>
       <BentoSection/>
       <Footer/>
-      {/* Additional sections (About, Speakers, Schedule, Apply) will go here */}
     </main>
   )
 }
