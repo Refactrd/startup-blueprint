@@ -1,8 +1,9 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
 import { motion } from 'framer-motion'
+
+// ─── Social SVGs ───────────────────────────────────────────────────────────
 
 function XSvg() {
   return (
@@ -11,7 +12,7 @@ function XSvg() {
     </svg>
   )
 }
- 
+
 function InstagramSvg() {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -21,66 +22,41 @@ function InstagramSvg() {
     </svg>
   )
 }
- 
-function LinkedInSvg() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-      <rect x="2" y="9" width="4" height="12" />
-      <circle cx="4" cy="4" r="2" />
-    </svg>
-  )
-}
 
 
-// ─── Nav links ─────────────────────────────────────────────────────────────
+// ─── Data ──────────────────────────────────────────────────────────────────
 
 const NAV_LINKS = [
-  { label: 'About',     href: '#about' },
-  { label: 'Apply',     href: '#apply' },
-  { label: 'Speakers',  href: '#speakers' },
-  { label: 'Schedule',  href: '#schedule' },
-  { label: 'Contact',   href: '#contact' },
+  { label: 'About',    href: '#about' },
+  { label: 'Apply',    href: '#apply' },
+  { label: 'Speakers', href: '#speakers' },
+  { label: 'Schedule', href: '#schedule' },
+  { label: 'Contact',  href: '#contact' },
 ]
 
-
 const SOCIAL = [
-  { label: 'X (Twitter)', href: 'https://twitter.com', Icon: XSvg },
+  { label: 'X (Twitter)', href: 'https://twitter.com',   Icon: XSvg },
   { label: 'Instagram',   href: 'https://instagram.com', Icon: InstagramSvg },
-  { label: 'LinkedIn',    href: 'https://linkedin.com', Icon: LinkedInSvg },
 ]
 
 // ─── Component ─────────────────────────────────────────────────────────────
 
 export default function Footer() {
-  const [email, setEmail] = useState('')
-  const [submitted, setSubmitted] = useState(false)
-
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    if (!email.trim()) return
-    // TODO: wire up to your email provider (Mailchimp, ConvertKit, etc.)
-    setSubmitted(true)
-    setEmail('')
-  }
-
   return (
     <footer aria-label="Site footer" className="w-full bg-brand-dark px-5 pb-8 pt-12 md:px-10 lg:px-16 xl:px-24">
       <div className="mx-auto max-w-7xl">
 
-        {/* ── Two-panel card — matches design exactly ───────── */}
+        {/* Two-panel card */}
         <motion.div
           initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] as const }}
           className="grid overflow-hidden rounded-3xl grid-cols-1 lg:grid-cols-2"
         >
 
-          {/* ── LEFT PANEL — cream/light, nav + copyright ───── */}
+          {/* LEFT — brand + nav */}
           <div className="flex flex-col justify-between bg-[#E2E0D8] px-8 py-10 md:px-10 md:py-12">
-
-            {/* Brand name */}
             <div>
               <Link href="#home" className="inline-block">
                 <span className="font-syne text-[18px] font-extrabold tracking-tight text-[#1C1A1A]">
@@ -89,7 +65,6 @@ export default function Footer() {
                 </span>
               </Link>
 
-              {/* Nav links — two columns matching design */}
               <nav aria-label="Footer navigation" className="mt-8">
                 <ul className="grid grid-cols-2 gap-x-10 gap-y-4" role="list">
                   {NAV_LINKS.map((link) => (
@@ -106,52 +81,41 @@ export default function Footer() {
               </nav>
             </div>
 
+            <p className="mt-10 font-raleway text-[11px] text-[#1C1A1A]/40">
+              © {new Date().getFullYear()} Startup Blueprint. All Rights Reserved.
+            </p>
           </div>
 
-          {/* ── RIGHT PANEL — brand blue, newsletter + social ── */}
+          {/* RIGHT — register CTA + social */}
           <div className="flex flex-col justify-between bg-brand-blue px-8 py-10 md:px-10 md:py-12">
 
-            {/* Newsletter */}
+            {/* Register block */}
             <div>
               <h2 className="font-syne text-[13px] font-bold uppercase tracking-[0.18em] text-white">
-                Stay Updated
+                Register for the Event
               </h2>
               <p className="mt-2 font-raleway text-[13px] leading-[1.7] text-white/75">
-                Subscribe for event updates &amp; exclusive content.
+                Secure your seat at Startups Blueprint '26. Limited spots available.
               </p>
 
-              <form
-                onSubmit={handleSubmit}
-                className="mt-6"
-                aria-label="Newsletter signup"
+              <Link
+                href="#apply"
+                className="group relative mt-6 inline-flex items-center gap-2 overflow-hidden rounded-full bg-white px-8 py-3.5 font-raleway text-sm font-semibold text-brand-blue transition-all duration-300 hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-blue"
               >
-                <div className="border-b border-white/30 pb-2">
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your email address"
-                    required
-                    aria-label="Email address"
-                    className="w-full bg-transparent font-raleway text-[14px] text-white placeholder-white/40 focus:outline-none"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="group relative mt-5 inline-flex w-full items-center justify-center overflow-hidden rounded-full bg-white py-3.5 font-raleway text-sm font-semibold text-brand-blue transition-all duration-300 hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-blue sm:w-auto sm:px-10"
-                >
-                  {submitted ? 'You\'re in! 🎉' : 'Subscribe'}
-                </button>
-              </form>
+                <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-brand-blue/5 to-transparent transition-transform duration-700 group-hover:translate-x-full" aria-hidden="true" />
+                Apply to Attend
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">
+                  <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="#0147FF" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </Link>
             </div>
 
-            {/* Social links */}
+            {/* Social */}
             <div className="mt-10">
               <h3 className="font-syne text-[13px] font-bold uppercase tracking-[0.18em] text-white">
                 Follow Us
               </h3>
-              <ul className="mt-4 flex items-center gap-4" role="list">
+              <ul className="mt-4 flex items-center gap-3" role="list">
                 {SOCIAL.map(({ label, href, Icon }) => (
                   <li key={label}>
                     <a
@@ -170,11 +134,19 @@ export default function Footer() {
           </div>
         </motion.div>
 
-        {/* ── Bottom bar — outside the card, dark bg ────────── */}
+        {/* Bottom bar */}
         <div className="mt-6 flex flex-wrap items-center justify-between gap-3 px-1">
           <p className="font-raleway text-[11px] text-brand-muted/35">
             Copyright © {new Date().getFullYear()} Startup Blueprint. All Rights Reserved.
           </p>
+          <div className="flex items-center gap-5">
+            <Link href="/terms" className="font-raleway text-[11px] text-brand-muted/35 transition-colors hover:text-brand-muted/70">
+              Terms and Conditions
+            </Link>
+            <Link href="/privacy" className="font-raleway text-[11px] text-brand-muted/35 transition-colors hover:text-brand-muted/70">
+              Privacy Policy
+            </Link>
+          </div>
         </div>
 
       </div>

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { syne, raleway } from '@/lib/fonts'
+import { syne, raleway, synenew } from '@/lib/fonts'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${syne.variable} ${raleway.variable}`}
+      className={`${syne.variable} ${raleway.variable} ${synenew.variable}`}
       suppressHydrationWarning
     >
       <body className="antialiased">{children}</body>
