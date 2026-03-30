@@ -17,7 +17,7 @@ const fadeUp = {
 
 const AVATARS = [
   { src: '/images/ibukun.jpg', alt: 'Speaker' },
-  { src: '/images/oyin-dawodu.png', alt: 'Speaker' },
+  { src: '/images/oyin.png', alt: 'Speaker' },
   { src: '/images/placeholder.jpg', alt: 'Speaker' },
 ]
 

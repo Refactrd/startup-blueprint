@@ -27,19 +27,19 @@ const LOGOS: {
     intrinsicH: 80,
     logoHeight: 'h-40', // 56px
   },
-  {
-    name: 'CCHub',
-    src: '/images/cchub-logo.png',
-    intrinsicW: 200,
-    intrinsicH: 60,
-    logoHeight: 'h-14',
-  },
+  // {
+  //   name: 'CCHub',
+  //   src: '/images/cchub-logo.png',
+  //   intrinsicW: 200,
+  //   intrinsicH: 60,
+  //   logoHeight: 'h-14',
+  // },
   {
     name: 'EventHub',
-    src: '/images/eventhub-logo.png',
-    intrinsicW: 240,
-    intrinsicH: 60,
-    logoHeight: 'h-14',
+    src: '/images/eventhub-second-logo.png',
+    intrinsicW: 100,
+    intrinsicH: 40,
+    logoHeight: 'h-10',
   },
 ]
 
@@ -55,7 +55,7 @@ export default function LogoStrip() {
       className="w-full overflow-hidden border-y border-black/8 bg-[#F5F0E8] lg:py-5 py-0"
     >
       <p className="sr-only">
-        Proudly supported by: Refactrd, LoyalPartners, CCHub, EventHub
+        Proudly supported by: Refactrd, LoyalPartners, EventHub
       </p>
 
       {/* Edge fade */}
