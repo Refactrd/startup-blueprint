@@ -82,7 +82,7 @@ export default function Footer() {
             </div>
 
             <p className="mt-10 font-raleway text-[11px] text-[#1C1A1A]/40">
-              © {new Date().getFullYear()} Startup Blueprint. All Rights Reserved.
+             Copyright © {new Date().getFullYear()} Startup Blueprint. All Rights Reserved.
             </p>
           </div>
 
@@ -134,20 +134,7 @@ export default function Footer() {
           </div>
         </motion.div>
 
-        {/* Bottom bar */}
-        <div className="mt-6 flex flex-wrap items-center justify-between gap-3 px-1">
-          <p className="font-raleway text-[11px] text-brand-muted/35">
-            Copyright © {new Date().getFullYear()} Startup Blueprint. All Rights Reserved.
-          </p>
-          <div className="flex items-center gap-5">
-            <Link href="/terms" className="font-raleway text-[11px] text-brand-muted/35 transition-colors hover:text-brand-muted/70">
-              Terms and Conditions
-            </Link>
-            <Link href="/privacy" className="font-raleway text-[11px] text-brand-muted/35 transition-colors hover:text-brand-muted/70">
-              Privacy Policy
-            </Link>
-          </div>
-        </div>
+       
 
       </div>
     </footer>

@@ -48,10 +48,9 @@ type SpeakerCard =
 const ROW_1: SpeakerCard[] = [
   {
     type: 'text',
-    name: 'Ibukun Ogunmola',
+    name: 'Ibukun Odubiyi',
     role: 'CX Strategist and Consultant',
     linkedin: 'https://linkedin.com/in/ibukun-ogunmola',
-    instagram: 'https://instagram.com',
   },
   {
     type: 'photo',
@@ -65,13 +64,12 @@ const ROW_1: SpeakerCard[] = [
     name: 'Oyin Dawodu',
     role: 'AI Operations Lead',
     linkedin: 'https://linkedin.com/in/oyindawodu',
-    instagram: 'https://instagram.com',
   },
   {
     type: 'photo',
     name: 'Oyin Dawodu',
     role: 'AI OPERATIONS LEAD',
-    src: '/images/oyin-dawodu.png',
+    src: '/images/oyin.png',
     fallback: 'from-neutral-600 to-neutral-800',
   },
 ]
@@ -89,7 +87,6 @@ const ROW_2: SpeakerCard[] = [
     name: 'Panelist TBC',
     role: 'AI Practitioner',
     linkedin: 'https://linkedin.com',
-    instagram: 'https://instagram.com',
   },
   {
     type: 'photo',
@@ -103,7 +100,6 @@ const ROW_2: SpeakerCard[] = [
     name: 'Speaker TBC',
     role: 'Founder & CEO',
     linkedin: 'https://linkedin.com',
-    instagram: 'https://instagram.com',
   },
 ]
 
@@ -153,17 +149,6 @@ function TextCard({
               className="flex h-8 w-8 items-center justify-center rounded-full bg-[#1C1A1A]/8 text-[#1C1A1A]/50 transition-all duration-200 hover:bg-brand-blue hover:text-white"
             >
               <LinkedInSvg />
-            </a>
-          )}
-          {instagram && (
-            <a
-              href={instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`${name} on Instagram`}
-              className="flex h-8 w-8 items-center justify-center rounded-full bg-[#1C1A1A]/8 text-[#1C1A1A]/50 transition-all duration-200 hover:bg-brand-blue hover:text-white"
-            >
-              <InstagramSvg />
             </a>
           )}
         </div>

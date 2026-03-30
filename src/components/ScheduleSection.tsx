@@ -112,16 +112,16 @@ const SESSIONS: Session[] = [
   {
     color: "peach",
     title: "Rotational Implementation Workshops",
-    by: "Oyin Dawodu and Ibukun Ogunmola",
+    by: "Oyin Dawodu and Ibukun Odubiyi",
     time: "11:45 AM – 12:45 PM",
     description:
       "Two expert-led workshops running in parallel. Every participant attends both. Walk away with clarity on your CX gaps and your top automation opportunities.",
-    image: "/images/oyin-dawodu.png",
+    image: "/images/oyin.png",
   },
   {
     color: "purple",
     title: "Collective Blueprint Mapping Session",
-    by: "Oyin Dawodu and Ibukun Ogunmola",
+    by: "Oyin Dawodu and Ibukun Odubiyi",
     time: "12:45 PM – 1:15 PM",
     description:
       "Synthesize your workshop insights, define your structure priorities, and map your startup's next move. This is where it all comes together.",
@@ -337,7 +337,7 @@ export default function ScheduleSection() {
               />
             </svg>
             <span className="font-syne text-[13px] font-bold text-white">
-              Day 1
+              Event Schedule
             </span>
             <span className="hidden text-white/30 sm:inline" aria-hidden="true">
               ·
