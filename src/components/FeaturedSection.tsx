@@ -27,7 +27,7 @@ const slideRight = {
 
 const SPEAKERS = [
   {
-    name: 'Ibukun Ogunmola',
+    name: 'Ibukun Odubiyi',
     title: 'CX Strategist and Consultant',
     company: 'LoyalPartners',
     date: 'April 25, 2026',
@@ -41,7 +41,7 @@ const SPEAKERS = [
     company: 'Refactrd',
     date: 'April 25, 2026',
     time: 'Workshop · 11:30 AM – 12:00 PM',
-    src: '/images/oyin-dawodu.png',
+    src: '/images/oyin.png',
     fallbackBg: 'bg-indigo-900',
   },
 ]
@@ -129,10 +129,10 @@ export default function FeaturedSection() {
           {/* Body */}
           <motion.p
             variants={fadeUp}
-            className="mt-5 max-w-lg font-raleway text-[14px] leading-[1.8] text-brand-muted/60"
+            className="mt-5 max-w-lg font-raleway text-[14px] leading-[1.8] text-white"
           >
             Startups Blueprint '26 gathers the most forward-thinking women in African tech.
-            Founders, operators, CX strategists, and AI practitioners — all in one room, with
+            Founders, Operators, CX strategists, and AI practitioners — all in one room, with
             one goal: to help you build a startup that actually scales.
           </motion.p>
 
@@ -149,19 +149,19 @@ export default function FeaturedSection() {
                 </div>
 
                 {/* Title + company */}
-                <p className="mt-3 font-raleway text-[12px] leading-relaxed text-brand-muted/55">
+                <p className="mt-3 font-raleway text-[14px] leading-relaxed text-white">
                   {speaker.title}
                   <br />
-                  <span className="text-brand-muted/40">{speaker.company}</span>
+                  <span className="text-white">{speaker.company}</span>
                 </p>
 
                 {/* Date */}
-                <p className="mt-4 font-raleway text-[13px] font-semibold text-white/80">
+                <p className="mt-4 font-raleway text-[15px] font-semibold text-white">
                   {speaker.date}
                 </p>
 
                 {/* Time */}
-                <p className="mt-0.5 font-raleway text-[12px] text-brand-muted/50">
+                <p className="mt-0.5 font-raleway text-[15px] text-white">
                   {speaker.time}
                 </p>
               </div>

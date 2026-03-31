@@ -221,7 +221,7 @@ export default function HeroSection() {
 
           <motion.h1
             variants={fadeUp}
-            className="font-syne font-extrabold text-white leading-[0.95] tracking-tight text-[52px] sm:text-[68px] md:text-[76px]"
+            className="font-syne-new font-extrabold text-white leading-[0.95] tracking-tight text-[52px] sm:text-[68px] md:text-[76px]"
           >
             Startups{" "}
             <span className="text-brand-blue relative inline-block">
@@ -272,7 +272,7 @@ export default function HeroSection() {
 
           <motion.h1
             variants={fadeUp}
-            className="font-syne font-extrabold text-white leading-[1] tracking-normal text-[96px]"
+            className="font-syne-new font-extrabold text-white leading-[1] tracking-normal text-[96px]"
           >
             Startups{" "}
             <span className="text-brand-blue relative inline-block">

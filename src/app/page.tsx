@@ -8,6 +8,7 @@ import ScheduleSection from '@/components/ScheduleSection'
 import WhyAttendSection from '@/components/WhyAttendSection'
 import BentoSection from '@/components/BentoSection'
 import Footer from '@/components/Footer'
+import PartnershipSection from '@/components/PartnershipSection'
 
 export default function HomePage() {
   return (
@@ -20,9 +21,9 @@ export default function HomePage() {
       <SpeakersSection/>
       <ScheduleSection/>
       <WhyAttendSection/>
+      <PartnershipSection/>
       <BentoSection/>
       <Footer/>
-      {/* Additional sections (About, Speakers, Schedule, Apply) will go here */}
     </main>
   )
 }
