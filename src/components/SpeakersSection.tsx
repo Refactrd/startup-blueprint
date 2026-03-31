@@ -306,7 +306,7 @@ export default function SpeakersSection() {
         className="mx-auto mt-12 max-w-7xl"
       >
         <Link
-          href="https://luma.com/w0wb5"
+          href="https://luma.com/w0wb5r1q"
           target="_blank"
           className="group inline-flex items-center gap-2.5 rounded-full border border-white/25 bg-transparent px-7 py-3.5 font-raleway text-sm font-medium text-white transition-all duration-300 hover:border-white/50 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
         >

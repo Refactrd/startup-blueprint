@@ -235,7 +235,7 @@ export default function HeroSection() {
           </motion.p>
 
           <motion.div variants={fadeUp} className="mt-7 flex flex-wrap gap-3">
-            <Link   href="https://luma.com/w0wb5" target="_blank" className="bg-brand-blue text-white px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-[0_0_24px_4px_rgba(1,71,255,0.4)] hover:scale-[1.04] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark">
+            <Link   href="https://luma.com/w0wb5r1q" target="_blank" className="bg-brand-blue text-white px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-[0_0_24px_4px_rgba(1,71,255,0.4)] hover:scale-[1.04] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark">
               Apply to Attend
             </Link>
             <Link href="#schedule" className="border border-white/20 text-white/80 px-6 py-3 rounded-full text-sm transition-all duration-300 hover:bg-white/10 hover:border-white/40 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
@@ -285,7 +285,7 @@ export default function HeroSection() {
           </motion.p>
 
           <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
-            <Link href="https://luma.com/w0wb5" target="_blank" className="bg-brand-blue text-white px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-[0_0_24px_4px_rgba(1,71,255,0.4)] hover:scale-[1.04] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark">
+            <Link href="https://luma.com/w0wb5r1q" target="_blank" className="bg-brand-blue text-white px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-[0_0_24px_4px_rgba(1,71,255,0.4)] hover:scale-[1.04] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark">
               Apply to Attend
             </Link>
             <Link href="#schedule" className="border border-white/20 text-white/80 px-6 py-3 rounded-full text-sm transition-all duration-300 hover:bg-white/10 hover:border-white/40 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
