@@ -60,8 +60,7 @@ export default function Footer() {
             <div>
               <Link href="#home" className="inline-block">
                 <span className="font-syne text-[18px] font-extrabold tracking-tight text-[#1C1A1A]">
-                  Startups Blueprint{' '}
-                  <span className="text-brand-blue">'26</span>
+                  Startups Blueprint
                 </span>
               </Link>
 
