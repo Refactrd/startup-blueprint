@@ -122,7 +122,7 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <Link
-            href="#apply"
+            href="luma.com/w0wb5r1q"
             className="hidden md:inline-flex items-center gap-2 rounded-full bg-brand-blue px-5 py-2.5 font-raleway text-sm font-600 text-white transition-all duration-200 hover:bg-brand-blue/90 hover:shadow-[0_0_20px_rgba(1,71,255,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark"
           >
             Apply Now
@@ -224,7 +224,7 @@ export default function Navbar() {
                 className="border-t border-white/10 px-6 py-6"
               >
                 <Link
-                  href="#apply"
+                  href="luma.com/w0wb5r1q"
                   onClick={close}
                   className="flex w-full items-center justify-center rounded-full bg-brand-blue py-3.5 font-raleway text-sm font-600 text-white transition-all duration-200 hover:bg-brand-blue/90 hover:shadow-[0_0_20px_rgba(1,71,255,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                 >
