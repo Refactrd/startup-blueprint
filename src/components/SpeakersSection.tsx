@@ -40,7 +40,7 @@ function LinkedInSvg() {
 // ─── Types ─────────────────────────────────────────────────────────────────
 
 type SpeakerCard =
-  | { type: 'text'; name: string; role: string; linkedin?: string; instagram?: string }
+  | { type: 'text'; name: string; role: string; company: string; linkedin?: string; instagram?: string }
   | { type: 'photo'; name: string; role: string; src: string; fallback: string }
 
 // ─── Speaker data ──────────────────────────────────────────────────────────
@@ -50,6 +50,7 @@ const ROW_1: SpeakerCard[] = [
     type: 'text',
     name: 'Ibukun Odubiyi',
     role: 'CX Strategist and Consultant',
+    company: 'LoyalPartners',
     linkedin: 'https://linkedin.com/in/ibukun-odubiyi-5593b618b',
   },
   {
@@ -62,6 +63,7 @@ const ROW_1: SpeakerCard[] = [
   {
     type: 'text',
     name: 'Oyin Dawodu',
+    company: 'Refactrd',
     role: 'AI Operations Lead',
     linkedin: 'https://linkedin.com/in/oyin-dawodu',
   },
@@ -79,6 +81,7 @@ const ROW_2: SpeakerCard[] = [
     type: 'text',
     name: 'Folashade Oroge',
     role: 'Founder & CEO',
+    company: 'EventHub',
     linkedin: 'https://linkedin.com/in/folashadeoluwaseun',
   },
   {
@@ -99,6 +102,7 @@ const ROW_2: SpeakerCard[] = [
     type: 'text',
     name: 'Speaker TBC',
     role: 'ECOSYSTEM BUILDER',
+    company: 'TBC',
     linkedin: 'https://linkedin.com',
   },
 ]
@@ -108,12 +112,14 @@ const ROW_2: SpeakerCard[] = [
 function TextCard({
   name,
   role,
+  company,
   index,
   linkedin,
   instagram,
 }: {
   name: string
   role: string
+  company: string
   index: number
   linkedin?: string
   instagram?: string
@@ -134,8 +140,11 @@ function TextCard({
         <p className="font-syne text-[20px] font-bold leading-snug tracking-tight text-[#1C1A1A] lg:text-[22px]">
           {name}
         </p>
-        <p className="mt-1.5 font-raleway text-[11px] font-semibold uppercase text-[#1C1A1A]/50">
+        <p className="mt-1.5 font-raleway text-[11.5px] font-semibold uppercase text-[#1C1A1A]/50">
           {role}
+        </p>
+        <p className="mt-1.5 font-raleway text-[11px] font-semibold uppercase text-[#1C1A1A]/50">
+          {company}
         </p>
       </div>
 
@@ -254,6 +263,7 @@ export default function SpeakersSection() {
                 key={card.name + i}
                 name={card.name}
                 role={card.role}
+                company={card.company}
                 index={i}
                 linkedin={(card as Extract<SpeakerCard, { type: 'text' }>).linkedin}
                 instagram={(card as Extract<SpeakerCard, { type: 'text' }>).instagram}
@@ -279,6 +289,7 @@ export default function SpeakersSection() {
                 key={card.name + i}
                 name={card.name}
                 role={card.role}
+                company={card.company}
                 index={i + 4}
                 linkedin={(card as Extract<SpeakerCard, { type: 'text' }>).linkedin}
                 instagram={(card as Extract<SpeakerCard, { type: 'text' }>).instagram}
