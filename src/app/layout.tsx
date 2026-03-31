@@ -3,12 +3,12 @@ import { syne, raleway, synenew } from '@/lib/fonts'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: "Startup Blueprint '26 | How Women Leaders Are Structuring the AI-Powered Generation of African Startups",
+  title: "Startup Blueprint | How Women Leaders Are Structuring the AI-Powered Generation of African Startups",
   description:
     "An exclusive roundtable on April 25, 2026 in Yaba, Lagos. Discover how women leaders are structuring the AI-powered generation of African startups.",
   keywords: ['African startups', 'women in tech', 'AI', 'Lagos', 'startup event', 'roundtable'],
   openGraph: {
-    title: "Startup Blueprint '26",
+    title: "Startups Blueprint",
     description:
       'How Women Leaders Are Structuring the AI-Powered Generation of African Startups.',
     type: 'website',
@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+  },
+  icons: {
+    icon: '/images/favicon.png', // or .png
+    shortcut: '/images/favicon.png',
+    apple: '/images/favicon.png', // optional
   },
 }
 

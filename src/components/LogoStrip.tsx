@@ -52,7 +52,7 @@ export default function LogoStrip() {
   return (
     <section
       aria-label="Proudly supported by"
-      className="w-full overflow-hidden border-y border-black/8 bg-[#F5F0E8] lg:py-5 py-0"
+      className="w-full overflow-hidden border-y border-black/8 bg-[#F5F0E8] py-0"
     >
       <p className="sr-only">
         Proudly supported by: Refactrd, LoyalPartners, EventHub

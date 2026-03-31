@@ -43,7 +43,7 @@ const SOCIAL = [
 
 export default function Footer() {
   return (
-    <footer aria-label="Site footer" className="w-full bg-brand-dark px-5 pb-8 pt-12 md:px-10 lg:px-16 xl:px-24">
+    <footer aria-label="Site footer" className="w-full bg-white px-5 pb-8 pt-16 md:px-10 lg:px-16 xl:px-24">
       <div className="mx-auto max-w-7xl">
 
         {/* Two-panel card */}
@@ -82,7 +82,7 @@ export default function Footer() {
             </div>
 
             <p className="mt-10 font-raleway text-[11px] text-[#1C1A1A]/40">
-             Copyright © {new Date().getFullYear()} Startup Blueprint. All Rights Reserved.
+             Copyright © {new Date().getFullYear()} Startups Blueprint. All Rights Reserved.
             </p>
           </div>
 
@@ -95,7 +95,7 @@ export default function Footer() {
                 Register for the Event
               </h2>
               <p className="mt-2 font-raleway text-[13px] leading-[1.7] text-white/75">
-                Secure your seat at Startups Blueprint '26. Limited spots available.
+                Secure your seat at Startups Blueprint. Limited spots available.
               </p>
 
               <Link
@@ -123,7 +123,7 @@ export default function Footer() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={label}
-                      className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-all duration-200 hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+                      className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-all duration-200 hover:bg-white/25 hover:scale-110 hover:shadow-[0_0_16px_rgba(255,255,255,0.15)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
                     >
                       <Icon />
                     </a>

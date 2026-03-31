@@ -84,7 +84,7 @@ export default function Navbar() {
           {/* Logo / Brand */}
           <Link
             href="#home"
-            aria-label="Startup Blueprint '26 — go to homepage"
+            aria-label="Startups Blueprint — go to homepage"
             className="group flex items-center gap-2 focus-visible:outline-none"
           >
             <span className="flex h-8 w-8 items-center justify-center rounded-md bg-brand-blue">
@@ -99,8 +99,7 @@ export default function Navbar() {
               </svg>
             </span>
             <span className="font-syne text-base font-700 tracking-tight text-white group-hover:text-brand-muted transition-colors duration-200">
-              Startups Blueprint{' '}
-              <span className="text-brand-blue">'26</span>
+              Startups Blueprint
             </span>
           </Link>
 
@@ -136,7 +135,7 @@ export default function Navbar() {
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
             onClick={toggle}
-            className="relative flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-lg border border-white/10 bg-white/5 md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
+            className="relative flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-lg border border-white/10 bg-white/5 transition-colors duration-200 hover:bg-white/15 hover:border-white/20 md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
           >
             <span
               className={`block h-px w-5 bg-white transition-all duration-300 ${

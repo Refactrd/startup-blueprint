@@ -227,8 +227,7 @@ export default function HeroSection() {
             <span className="text-brand-blue relative inline-block">
               Blueprint
               <span className="absolute left-0 -bottom-1 w-full h-[3px] bg-brand-blue/40" />
-            </span>{" "}
-            '26
+            </span>
           </motion.h1>
 
           <motion.p variants={fadeUp} className="mt-5 text-white/70 text-sm sm:text-base max-w-lg">
@@ -236,10 +235,10 @@ export default function HeroSection() {
           </motion.p>
 
           <motion.div variants={fadeUp} className="mt-7 flex flex-wrap gap-3">
-            <Link href="#apply" className="bg-brand-blue text-white px-6 py-3 rounded-full text-sm font-semibold hover:shadow-lg">
+            <Link href="#apply" className="bg-brand-blue text-white px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-[0_0_24px_4px_rgba(1,71,255,0.4)] hover:scale-[1.04] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark">
               Apply to Attend
             </Link>
-            <Link href="#schedule" className="border border-white/20 text-white/80 px-6 py-3 rounded-full text-sm hover:bg-white/10">
+            <Link href="#schedule" className="border border-white/20 text-white/80 px-6 py-3 rounded-full text-sm transition-all duration-300 hover:bg-white/10 hover:border-white/40 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
               See the Agenda
             </Link>
           </motion.div>
@@ -279,7 +278,6 @@ export default function HeroSection() {
               Blueprint
               <span className="absolute left-0 -bottom-1 w-full h-[10px] bg-brand-blue/40" />
             </span>{" "}
-            '26
           </motion.h1>
 
           <motion.p variants={fadeUp} className="mt-6 text-white/70 max-w-lg text-lg">
@@ -287,10 +285,10 @@ export default function HeroSection() {
           </motion.p>
 
           <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
-            <Link href="#apply" className="bg-brand-blue text-white px-6 py-3 rounded-full text-sm font-semibold hover:shadow-lg">
+            <Link href="#apply" className="bg-brand-blue text-white px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-[0_0_24px_4px_rgba(1,71,255,0.4)] hover:scale-[1.04] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark">
               Apply to Attend
             </Link>
-            <Link href="#schedule" className="border border-white/20 text-white/80 px-6 py-3 rounded-full text-sm hover:bg-white/10">
+            <Link href="#schedule" className="border border-white/20 text-white/80 px-6 py-3 rounded-full text-sm transition-all duration-300 hover:bg-white/10 hover:border-white/40 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
               See the Agenda
             </Link>
           </motion.div>

@@ -137,7 +137,7 @@ export default function WhyAttendSection() {
   return (
     <section
       id="why-attend"
-      aria-label="Why Attend Startup Blueprint '26"
+      aria-label="Why Attend Startup Blueprint"
       className="w-full bg-brand-dark px-6 pb-20 pt-16 md:px-10 lg:px-16 xl:px-24"
     >
       <div className="mx-auto max-w-7xl">
@@ -164,7 +164,7 @@ export default function WhyAttendSection() {
             transition={{ delay: 0.2, duration: 0.55 }}
             className="font-raleway text-[14px] leading-[1.8] text-brand-muted/55 lg:pt-3 lg:text-right"
           >
-            Discover why Startups Blueprint '26 is the must-attend event for women founders,
+            Discover why Startups Blueprint is the must-attend event for women founders,
             operators, and decision makers building the next generation of African startups.
           </motion.p>
         </div>
