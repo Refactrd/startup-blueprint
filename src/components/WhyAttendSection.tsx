@@ -69,11 +69,30 @@ function WhyCard({
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: '-40px' }}
-      className="relative flex h-[280px] flex-col overflow-hidden rounded-2xl bg-[#1E1C1C] p-6 sm:h-[300px] lg:h-[320px]"
+      whileHover={{ y: -6, scale: 1.025 }}
+      transition={{ type: 'spring', stiffness: 280, damping: 22 }}
+      className="group relative flex h-[280px] cursor-pointer flex-col overflow-hidden rounded-2xl border border-white/[0.05] bg-[#252323] p-6 sm:h-[300px] lg:h-[320px]"
+      style={{ transition: 'border-color 0.35s ease, box-shadow 0.35s ease' }}
+      onMouseEnter={e => {
+        const el = e.currentTarget
+        el.style.borderColor = 'rgba(45,90,227,0.35)'
+        el.style.boxShadow = '0 0 32px 0 rgba(45,90,227,0.12), 0 8px 32px rgba(0,0,0,0.35)'
+      }}
+      onMouseLeave={e => {
+        const el = e.currentTarget
+        el.style.borderColor = 'rgba(255,255,255,0.05)'
+        el.style.boxShadow = 'none'
+      }}
     >
+      {/* ── Top shimmer line on hover ── */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[1.5px] translate-x-[-100%] bg-gradient-to-r from-transparent via-brand-blue/70 to-transparent opacity-0 transition-all duration-700 group-hover:translate-x-[100%] group-hover:opacity-100" />
+
+      {/* ── Subtle inner glow overlay on hover ── */}
+      <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-brand-blue/[0.06] via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
       {/* ── Label — always top, positioned based on layout ── */}
       <p
-        className={`font-raleway text-[10px] font-bold uppercase tracking-[0.18em] text-white/50 ${
+        className={`relative font-raleway text-[10px] font-bold uppercase tracking-[0.18em] text-white/50 transition-colors duration-300 group-hover:text-brand-blue/80 ${
           isNumberRight ? 'self-start text-left' : 'self-start text-left'
         }`}
       >
@@ -82,26 +101,18 @@ function WhyCard({
 
       {/* ── Description text — opposite corner to number ── */}
       {isNumberRight ? (
-        // Cards 03 & 04: text top-left (below label), number bottom-right
-        <p className="mt-5 max-w-[55%] font-raleway text-[13px] lg:text-[15px] leading-[1.75] text-white/60">
+        <p className="relative mt-5 max-w-[55%] font-raleway text-[13px] leading-[1.75] text-white/60 transition-colors duration-300 group-hover:text-white/80 lg:text-[15px]">
           {card.description}
         </p>
       ) : (
-        // Cards 01 & 02: text top-right, number bottom-left
-        <p className="mt-5 self-end max-w-[55%] text-right font-raleway text-[13px] lg:text-[15px] leading-[1.75] text-white/60">
+        <p className="relative mt-5 max-w-[55%] self-end text-right font-raleway text-[13px] leading-[1.75] text-white/60 transition-colors duration-300 group-hover:text-white/80 lg:text-[15px]">
           {card.description}
         </p>
       )}
 
       {/* ── Giant number — bleeds off bottom edge ── */}
-      {/*
-        The number is positioned absolutely at the bottom.
-        It intentionally overflows (overflow-hidden on parent clips it),
-        creating the cropped-number effect from the design.
-        Blue gradient matching the design's brand-blue to deeper blue.
-      */}
       <div
-        className={`pointer-events-none absolute bottom-[-28px] select-none font-syne font-extrabold leading-none ${
+        className={`pointer-events-none absolute bottom-[-28px] select-none font-syne font-extrabold leading-none transition-opacity duration-300 group-hover:opacity-100 ${
           isNumberRight ? 'right-[-8px]' : 'left-[-8px]'
         }`}
         aria-hidden="true"
@@ -111,7 +122,7 @@ function WhyCard({
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',
-          opacity: 0.9,
+          opacity: 0.75,
         }}
       >
         {card.number}
