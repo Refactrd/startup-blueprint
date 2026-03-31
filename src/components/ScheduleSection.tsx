@@ -150,7 +150,7 @@ const SESSIONS: Session[] = [
   {
     color: "peach",
     title: "Workshop 1 — Designing Customer Experience for Scalable Startups",
-    by: "Ibukun Ogunmola",
+    by: "Ibukun Odubiyi",
     time: "11:30 AM – 12:00 PM",
     description:
       "A hands-on workshop exploring how to design customer experience frameworks that hold up as your startup scales. Walk away with clarity on your CX gaps and a structure you can implement immediately.",

@@ -102,7 +102,7 @@ export default function PartnershipSection() {
             transition={{ delay: 0.2, duration: 0.55 }}
             className="font-raleway text-[14px] leading-[1.8] text-[#1C1A1A]/55 lg:pt-3 lg:text-right"
           >
-            50+ founders, operators, and ecosystem leaders. One curated room.
+            30+ founders, operators, and ecosystem leaders. One curated room.
             If your brand belongs in the next generation of African startups — this is where you show up.
           </motion.p>
         </div>

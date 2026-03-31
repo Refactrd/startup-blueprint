@@ -54,7 +54,7 @@ const ROW_1: SpeakerCard[] = [
   },
   {
     type: 'photo',
-    name: 'Ibukun Ogunmola',
+    name: 'Ibukun Odubiyi',
     role: 'CX STRATEGIST',
     src: '/images/ibukun.jpg',
     fallback: 'from-zinc-600 to-zinc-800',
