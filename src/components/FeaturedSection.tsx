@@ -131,7 +131,7 @@ export default function FeaturedSection() {
             variants={fadeUp}
             className="mt-5 max-w-lg font-raleway text-[14px] leading-[1.8] text-white"
           >
-            Startups Blueprint '26 gathers the most forward-thinking women in African tech.
+            Startups Blueprint gathers the most forward-thinking women in African tech.
             Founders, Operators, CX strategists, and AI practitioners — all in one room, with
             one goal: to help you build a startup that actually scales.
           </motion.p>

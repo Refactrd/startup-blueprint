@@ -91,13 +91,13 @@ export default function AboutSection() {
           {/* Right — body text */}
           <motion.div variants={fadeUp} className="flex flex-col gap-4">
             <p className="font-raleway text-[15px] leading-[1.8] text-[#1C1A1A]/70">
-              <span className="font-semibold text-brand-blue">Startups Blueprint '26</span> is not a
+              <span className="font-semibold text-brand-blue">Startups Blueprint</span> is not a
               conference. It is a curated leadership experience built for women founders and decision
               makers who are ready to stop hustling and start scaling, with the right systems, the
               right frameworks, and the right implementation pathway.
             </p>
             <p className="font-raleway text-[15px] leading-[1.8] text-[#1C1A1A]/70">
-              Over four focused hours, you will unpack what it truly takes to build an AI-powered
+              Over four focused hours, you will unpack what it truly takes to build a Modern & an AI-powered
               startup ready for structured growth and global relevance.
             </p>
           </motion.div>
@@ -117,6 +117,8 @@ export default function AboutSection() {
             <motion.div
               key={card.category}
               variants={fadeUp}
+              whileHover={{ y: -5, boxShadow: '0 16px 40px rgba(0,0,0,0.3)' }}
+              transition={{ type: 'spring', stiffness: 300, damping: 24 }}
               className={`group relative overflow-hidden rounded-2xl ${
                 card.wide ? 'min-h-[360px] sm:col-span-2 lg:col-span-1' : 'min-h-[360px]'
               }`}

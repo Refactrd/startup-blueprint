@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -52,6 +53,7 @@ interface Session {
   time: string;
   description: string;
   image?: string;
+  icon?: React.ReactNode;
 }
 
 // ─── Color map ─────────────────────────────────────────────────────────────
@@ -73,15 +75,31 @@ const SESSIONS: Session[] = [
     time: "10:00 AM – 10:15 AM",
     description:
       "Guest check-in and participant registration. Set the tone. You are not here to listen. You are here to build.",
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <rect x="4" y="6" width="18" height="22" rx="2.5" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M22 12h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <path d="M16 16l4-4-4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M4 16h14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    ),
   },
   {
     color: "purple",
     title: "Opening Address — Setting the Blueprint",
-    by: "Event Host",
+    by: "Folashade Oroge, Event Host",
     time: "10:15 AM – 10:20 AM",
     description:
       "Why African startups stall at growth stage, why structure matters before scale, and what you will walk away with today.",
-    image: "/images/placeholder.jpg",
+    image: "/images/fola.jpg",
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <path d="M16 4C16 4 10 8 10 16s6 12 6 12 6-4 6-12S16 4 16 4Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+        <path d="M10 16h12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <path d="M16 4v24" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <circle cx="16" cy="16" r="12" stroke="currentColor" strokeWidth="1.8" />
+      </svg>
+    ),
   },
   {
     color: "yellow",
@@ -91,48 +109,105 @@ const SESSIONS: Session[] = [
     time: "10:20 AM – 10:35 AM",
     description:
       "A strategic keynote exploring the future of AI-driven startups, the competitive power of customer experience, and what it takes to build globally relevant businesses from Africa.",
-    image: "/images/placeholder.jpg",
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <path d="M16 3l2.8 8.6H27l-7 5.1 2.7 8.3L16 20l-6.7 5 2.7-8.3-7-5.1h8.2L16 3Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+      </svg>
+    ),
   },
   {
     color: "blue",
-    title: "Impact Panel — CX and Automation Structures in African Startups",
-    by: "Panel and Moderator",
+    title: "Impact Panel — CX and AI Structures in African Startups",
+    by: "Folashade Oroge, Panel Moderator",
     time: "10:35 AM – 11:15 AM",
     description:
-      "A sharp, focused panel on the real challenges driving startups toward automation and structured CX — and the measurable advantages waiting on the other side. Live Q&A included.",
-    image: "/images/ibukun.jpg",
+      "A sharp, focused panel on the real challenges driving African startups toward AI-powered operations and structured CX, and the competitive advantages waiting on the other side. Live Q&A included.",
+    image: "/images/fola.jpg",
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <circle cx="10" cy="10" r="4" stroke="currentColor" strokeWidth="1.8" />
+        <circle cx="22" cy="10" r="4" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M4 26c0-4 2.7-6 6-6h12c3.3 0 6 2 6 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <path d="M16 24v-6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    ),
   },
   {
     color: "grey",
-    title: "Interactive Q&A Session",
-    time: "11:15 AM – 11:45 AM",
+    title: "Interactive Insight Session",
+    time: "11:15 AM – 11:30 AM",
     description:
       "A game-structured, interactive session designed to capture ecosystem insights and personal startup context. Come ready to engage.",
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <path d="M16 4a8 8 0 0 1 4 15v3h-8v-3A8 8 0 0 1 16 4Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+        <path d="M12 25h8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <path d="M13 28h6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <path d="M16 4v3M8.3 8.3l2.1 2.1M23.7 8.3l-2.1 2.1M4 16h3M25 16h3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      </svg>
+    ),
   },
   {
     color: "peach",
-    title: "Rotational Implementation Workshops",
-    by: "Oyin Dawodu and Ibukun Odubiyi",
-    time: "11:45 AM – 12:45 PM",
+    title: "Workshop 1 — Designing Customer Experience for Scalable Startups",
+    by: "Ibukun Ogunmola",
+    time: "11:30 AM – 12:00 PM",
     description:
-      "Two expert-led workshops running in parallel. Every participant attends both. Walk away with clarity on your CX gaps and your top automation opportunities.",
+      "A hands-on workshop exploring how to design customer experience frameworks that hold up as your startup scales. Walk away with clarity on your CX gaps and a structure you can implement immediately.",
+    image: "/images/ibukun.jpg",
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <path d="M4 8a3 3 0 0 1 3-3h18a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H18l-6 4v-4H7a3 3 0 0 1-3-3V8Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+        <path d="M10 13h12M10 17h7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    ),
+  },
+  {
+    color: "peach",
+    title: "Workshop 2 — Operate or Fall Behind: Designing an AI-Powered Operation from the Ground Up",
+    by: "Oyin Dawodu",
+    time: "12:05 PM – 12:35 PM",
+    description:
+      "A hands on workshop for founders ready to build AI into their operations from the ground up. Assess your business functions, get your AI readiness score, and leave with a clear entry point to operate more competitively.",
     image: "/images/oyin.png",
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <rect x="9" y="5" width="14" height="16" rx="4" stroke="currentColor" strokeWidth="1.8" />
+        <circle cx="13" cy="11" r="1.2" fill="currentColor" />
+        <circle cx="19" cy="11" r="1.2" fill="currentColor" />
+        <path d="M13 15c0 0 1 2 3 2s3-2 3-2" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+        <path d="M9 21h14M12 24v3M20 24v3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    ),
   },
   {
     color: "purple",
     title: "Collective Blueprint Mapping Session",
-    by: "Oyin Dawodu and Ibukun Odubiyi",
+    by: "Organizing Team",
     time: "12:45 PM – 1:15 PM",
     description:
       "Synthesize your workshop insights, define your structure priorities, and map your startup's next move. This is where it all comes together.",
-    image: "/images/ibukun.jpg",
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <path d="M4 8l8-3 8 3 8-3v19l-8 3-8-3-8 3V8Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+        <path d="M12 5v19M20 8v19" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    ),
   },
   {
     color: "yellow",
-    title: "Implementation Pathway Presentation and Networking",
+    title: "Implementation Pathway, Refreshments and Networking",
     time: "1:15 PM – 2:00 PM",
     description:
-      "Refreshments, sponsor showcase, and the implementation desk — where you confirm your audit slot and meet the teams who will help you execute.",
+      "Sponsor showcase, implementation desk, audit slot confirmation, and the teams who will help you execute.",
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <path d="M6 14c0-6 4-10 10-10s10 4 10 10c0 4-2 7-5 9H11c-3-2-5-5-5-9Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+        <path d="M11 23v5h10v-5" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+        <path d="M13 28h6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <path d="M12 17l2.5 2.5L20 13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
   },
 ];
 
@@ -171,19 +246,25 @@ function SessionCard({
   return (
     <motion.div
       {...motionProps}
-      className={`flex items-start gap-5 rounded-2xl ${bg} p-5 sm:p-6`}
+      whileHover={{ y: -3, boxShadow: '0 8px 24px rgba(0,0,0,0.08)' }}
+      className={`flex items-start gap-5 rounded-2xl ${bg} p-5 sm:p-6 cursor-default`}
     >
       {session.image ? (
         <div className="relative hidden h-[90px] w-[90px] shrink-0 overflow-hidden rounded-xl sm:block">
-          <div className="absolute inset-0 bg-zinc-300" />
           <Image
             src={session.image}
             alt={session.by ?? session.title}
             fill
             sizes="90px"
-            className="relative z-10 object-cover object-top"
+            className="object-cover object-top"
             loading="lazy"
           />
+        </div>
+      ) : session.icon ? (
+        <div
+          className={`hidden h-[90px] w-[90px] shrink-0 items-center justify-center rounded-xl sm:flex ${dot} text-white`}
+        >
+          {session.icon}
         </div>
       ) : (
         <div className="hidden h-[90px] w-[90px] shrink-0 sm:block" />

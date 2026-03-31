@@ -17,35 +17,46 @@ const fadeUp = {
 
 const TIERS = [
   {
+    number: '01',
+    bestFor: 'SaaS tools, banks, accelerators, AI companies, infrastructure providers.',
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-        <path d="M10 2L12 7H17L13 10.5L14.5 16L10 13L5.5 16L7 10.5L3 7H8L10 2Z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" fill="none" />
+        <path d="M10 2L12 7H17L13 10.5L14.5 16L10 13L5.5 16L7 10.5L3 7H8L10 2Z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
       </svg>
     ),
-    label: 'Title Sponsor',
-    description: 'Maximum brand visibility across all event touchpoints — digital, physical, and post-event.',
+    label: 'Lead Sponsor',
+    description:
+      'Maximum visibility and direct engagement with founders shaping AI-powered startups.',
+    perks: [
+      'Co-branding on event as Lead Sponsor',
+      'Speaking or insight slot during program',
+      'Logo across all digital and physical materials',
+      'Direct founder engagement during networking',
+      'Featured in post-event recap and media',
+      'Optional implementation or demo desk',
+    ],
   },
   {
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-        <rect x="2" y="10" width="4" height="8" rx="1" stroke="currentColor" strokeWidth="1.4" />
-        <rect x="8" y="6" width="4" height="12" rx="1" stroke="currentColor" strokeWidth="1.4" />
-        <rect x="14" y="2" width="4" height="16" rx="1" stroke="currentColor" strokeWidth="1.4" />
-      </svg>
-    ),
-    label: 'Workshop Sponsor',
-    description: 'Co-brand one of the expert-led implementation workshops and engage founders directly.',
-  },
-  {
+    number: '02',
+    bestFor: 'Founder communities, tech hubs, women in tech groups, VC communities, operator networks.',
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
         <circle cx="10" cy="10" r="8" stroke="currentColor" strokeWidth="1.4" />
-        <path d="M6 10C6 10 7.5 13 10 13C12.5 13 14 10 14 10C14 10 12.5 7 10 7C7.5 7 6 10 6 10Z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" fill="none" />
+        <path d="M6 10C6 10 7.5 13 10 13C12.5 13 14 10 14 10C14 10 12.5 7 10 7C7.5 7 6 10 6 10Z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
         <circle cx="10" cy="10" r="1.5" fill="currentColor" />
       </svg>
     ),
     label: 'Community Partner',
-    description: 'Align your brand with the African women-in-tech ecosystem and the Refactrd community.',
+    description:
+      'Align your community with the next generation of AI-powered African startups.',
+    perks: [
+      'Brand featured as ecosystem partner',
+      'Access to curated founder room',
+      'Community shoutouts across promotions',
+      'Logo on event website and materials',
+      'Post-event recap mention',
+      'Priority invite allocation for members',
+    ],
   },
 ]
 
@@ -55,142 +66,158 @@ export default function PartnershipSection() {
   return (
     <section
       id="partner"
-      aria-label="Partner with Startup Blueprint '26"
-      className="w-full bg-[#F2F2F2] px-6 pb-20 lg:pt-[100px] pt-8 md:px-10 lg:px-16 xl:px-24"
+      aria-label="Partner with Startups Blueprint"
+      className="w-full bg-[#F2F2F2] px-6 pb-20 pt-16 md:px-10 lg:px-16 xl:px-24"
     >
       <div className="mx-auto max-w-7xl">
 
-        {/*
-          Two-column layout:
-          Left  — heading, subtext, tier list
-          Right — CTA card (blue, matching the footer panel style)
-        */}
-        <div className="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-[1fr_400px]">
+        {/* ── Header ─────────────────────────────────────────── */}
+        <div className="mb-14 grid grid-cols-1 items-start gap-6 lg:grid-cols-[1fr_320px]">
+          <div>
+            <motion.p
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="font-raleway text-[11px] font-bold uppercase tracking-[0.15em] text-brand-blue"
+            >
+              Partnership Opportunities
+            </motion.p>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1, duration: 0.65, ease: [0.22, 1, 0.36, 1] as const }}
+              className="mt-3 font-syne font-extrabold uppercase leading-[0.92] tracking-tight text-[#1C1A1A]"
+              style={{ fontSize: 'clamp(36px, 4vw, 70px)' }}
+            >
+              Partner with<br />Startups Blueprint.
+            </motion.h2>
+          </div>
 
-          {/* ── LEFT ──────────────────────────────────────────── */}
-          <motion.div
-            custom={0}
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-40px' }}
-            className="flex flex-col justify-between rounded-3xl bg-[#1E1C1C] px-8 py-10 md:px-10 md:py-12"
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.55 }}
+            className="font-raleway text-[14px] leading-[1.8] text-[#1C1A1A]/55 lg:pt-3 lg:text-right"
           >
-            <div>
-              {/* Eyebrow */}
-              <p className="font-raleway text-[11px] font-bold uppercase  text-brand-blue">
-                Partnership Opportunities
-              </p>
+            50+ founders, operators, and ecosystem leaders. One curated room.
+            If your brand belongs in the next generation of African startups — this is where you show up.
+          </motion.p>
+        </div>
 
-              {/* Heading */}
-              <h2 className="mt-3 font-syne text-[32px] font-extrabold leading-[1.05] tracking-tight text-white sm:text-[38px] lg:text-[44px]">
-                Grow with us.{' '}
-                <span className="text-brand-blue">Partner</span>{' '}
-                with Startups Blueprint '26.
-              </h2>
-
-              {/* Body */}
-              <p className="mt-4 max-w-lg font-raleway text-[14px] leading-[1.8] text-white">
-                Startup Blueprint '26 brings together 50+ founders, operators, and ecosystem
-                leaders in one curated room. If your brand is built for the next generation of
-                African startups, this is where you belong.
-              </p>
-            </div>
-
-            {/* Tier list */}
-            <ul className="mt-10 flex flex-col gap-4" role="list">
-              {TIERS.map((tier, i) => (
-                <motion.li
-                  key={tier.label}
-                  custom={i + 1}
-                  variants={fadeUp}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, margin: '-20px' }}
-                  className="flex items-start gap-4 rounded-xl bg-white/5 px-5 py-4"
-                >
-                  {/* Icon */}
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-blue/15 text-brand-blue">
+        {/* ── Tier cards ─────────────────────────────────────── */}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {TIERS.map((tier, i) => (
+            <motion.div
+              key={tier.label}
+              custom={i + 1}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: '-40px' }}
+              whileHover={{ y: -5, boxShadow: '0 12px 32px rgba(0,0,0,0.08)' }}
+              transition={{ type: 'spring', stiffness: 300, damping: 24 }}
+              className="flex flex-col justify-between rounded-2xl bg-white p-6 sm:p-8 cursor-default"
+            >
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#F2F2F2] text-brand-blue">
                     {tier.icon}
                   </span>
-                  <div>
-                    <p className="font-syne text-[13px] font-bold text-white">{tier.label}</p>
-                    <p className="mt-0.5 font-raleway text-[12px] leading-relaxed text-white">
-                      {tier.description}
-                    </p>
-                  </div>
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* ── RIGHT — CTA card ───────────────────────────────── */}
-          <motion.div
-            custom={1}
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-40px' }}
-            className="flex flex-col justify-between rounded-3xl bg-brand-blue px-8 py-10 md:px-10 md:py-12"
-          >
-            <div>
-              {/* Decorative large quote mark */}
-              <div className="mb-6 font-syne text-[80px] font-extrabold leading-none text-white/10 select-none" aria-hidden="true">
-                "
+                  <span className="font-syne text-[13px] font-bold text-[#1C1A1A]/15">
+                    {tier.number}
+                  </span>
+                </div>
+                <p className="mt-5 font-syne text-[22px] font-bold text-[#1C1A1A]">
+                  {tier.label}
+                </p>
+                <p className="mt-2 font-raleway text-[15px] leading-[1.7] text-[#1C1A1A]/55">
+                  {tier.description}
+                </p>
+                <p className="mt-3 font-raleway text-[13px] leading-relaxed text-[#1C1A1A]/40">
+                  <span className="font-semibold text-[#1C1A1A]/50">Best for:</span>{' '}
+                  {tier.bestFor}
+                </p>
               </div>
 
-              <h3 className="font-syne text-[22px] font-extrabold leading-snug text-white sm:text-[26px]">
-                Let's build something meaningful together.
-              </h3>
-
-              <p className="mt-4 font-raleway text-[13px] leading-[1.8] text-white">
-                Whether you're looking to sponsor a session, co-brand a workshop, or align your
-                ecosystem with Africa's most intentional startup event, we'd love to hear from you.
-              </p>
-
-              {/* What to expect list */}
-              <ul className="mt-7 flex flex-col gap-3" role="list">
-                {[
-                  'Brand visibility across 500+ attendees',
-                  'Speaking and workshop co-branding options',
-                  'Implementation desk presence',
-                  'Post-event digital mentions and recap features',
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-2.5">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="mt-0.5 shrink-0" aria-hidden="true">
-                      <circle cx="8" cy="8" r="7" stroke="white" strokeOpacity="0.3" strokeWidth="1.2" />
-                      <path d="M5 8L7 10L11 6" stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+              <ul className="mt-6 flex flex-col gap-3" role="list">
+                {tier.perks.map((perk) => (
+                  <li key={perk} className="flex items-start gap-2.5">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      className="mt-0.5 shrink-0"
+                      aria-hidden="true"
+                    >
+                      <circle cx="7" cy="7" r="6" stroke="#0147FF" strokeOpacity="0.25" strokeWidth="1" />
+                      <path
+                        d="M4.5 7l1.8 1.8L9.5 5"
+                        stroke="#0147FF"
+                        strokeWidth="1.4"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
                     </svg>
-                    <span className="font-raleway text-[13px] leading-relaxed text-white">
-                      {item}
+                    <span className="font-raleway text-[14px] leading-relaxed text-[#1C1A1A]/60">
+                      {perk}
                     </span>
                   </li>
                 ))}
               </ul>
-            </div>
-
-            {/* CTA */}
-            <div className="mt-10">
-              <p className="mb-3 font-raleway text-[11px] font-semibold uppercase tracking-[0.15em] text-white">
-                Ready to partner?
-              </p>
-              <a
-                href="mailto:partnerships@refactrd.com?subject=Partnership%20Inquiry%20%E2%80%94%20Startup%20Blueprint%20%2726&body=Hi%2C%0A%0AI'm%20interested%20in%20partnering%20with%20Startup%20Blueprint%20'26.%0A%0ACompany%3A%0AContact%20name%3A%0APartnership%20interest%3A"
-                className="group relative inline-flex w-full items-center justify-center gap-2 overflow-hidden rounded-full bg-white px-8 py-3.5 font-raleway text-sm font-semibold text-brand-blue transition-all duration-300 hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-blue"
-              >
-                <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-brand-blue/5 to-transparent transition-transform duration-700 group-hover:translate-x-full" aria-hidden="true" />
-                Send a Partnership Inquiry
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">
-                  <path d="M2 8H14M14 8L10 4M14 8L10 12" stroke="#0147FF" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </a>
-
-              <p className="mt-3 text-center font-raleway text-[11px] text-white">
-                partnerships@refactrd.com
-              </p>
-            </div>
-          </motion.div>
+            </motion.div>
+          ))}
         </div>
+
+        {/* ── CTA strip ──────────────────────────────────────── */}
+        <motion.div
+          custom={4}
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-40px' }}
+          className="mt-4 flex flex-col items-start justify-between gap-6 rounded-2xl bg-[#1C1A1A] px-8 py-8 sm:flex-row sm:items-center md:px-10"
+        >
+          <div>
+            <p className="font-raleway text-[11px] font-bold uppercase tracking-[0.15em] text-brand-blue">
+              Ready to partner?
+            </p>
+            <p className="mt-1 font-syne text-[20px] font-extrabold text-white sm:text-[24px]">
+              Let's build something meaningful together.
+            </p>
+          </div>
+
+          <a
+            href="mailto:partnerships@startupsblueprint.com?subject=Partnership%20Inquiry%20%E2%80%94%20Startup%20Blueprint%20%2726&body=Hi%2C%0A%0AI'm%20interested%20in%20partnering%20with%20Startup%20Blueprint%20'.%0A%0ACompany%3A%0AContact%20name%3A%0APartnership%20interest%3A"
+            className="group relative inline-flex shrink-0 items-center gap-2 overflow-hidden rounded-full bg-brand-blue px-8 py-3.5 font-raleway text-sm font-semibold text-white transition-all duration-300 hover:shadow-[0_0_24px_4px_rgba(1,71,255,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 focus-visible:ring-offset-[#1C1A1A]"
+          >
+            <span
+              className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full"
+              aria-hidden="true"
+            />
+            Send a Partnership Inquiry
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 16 16"
+              fill="none"
+              aria-hidden="true"
+              className="transition-transform duration-300 group-hover:translate-x-1"
+            >
+              <path
+                d="M2 8H14M14 8L10 4M14 8L10 12"
+                stroke="white"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </a>
+        </motion.div>
+
       </div>
     </section>
   )

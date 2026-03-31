@@ -50,7 +50,7 @@ const ROW_1: SpeakerCard[] = [
     type: 'text',
     name: 'Ibukun Odubiyi',
     role: 'CX Strategist and Consultant',
-    linkedin: 'https://linkedin.com/in/ibukun-ogunmola',
+    linkedin: 'https://linkedin.com/in/ibukun-odubiyi-5593b618b',
   },
   {
     type: 'photo',
@@ -63,7 +63,7 @@ const ROW_1: SpeakerCard[] = [
     type: 'text',
     name: 'Oyin Dawodu',
     role: 'AI Operations Lead',
-    linkedin: 'https://linkedin.com/in/oyindawodu',
+    linkedin: 'https://linkedin.com/in/oyin-dawodu',
   },
   {
     type: 'photo',
@@ -76,17 +76,17 @@ const ROW_1: SpeakerCard[] = [
 
 const ROW_2: SpeakerCard[] = [
   {
-    type: 'photo',
-    name: 'Speaker TBC',
-    role: 'WORKSHOP LEAD',
-    src: '/images/placeholder.jpg',
-    fallback: 'from-stone-600 to-stone-800',
+    type: 'text',
+    name: 'Folashade Oroge',
+    role: 'Founder & CEO',
+    linkedin: 'https://linkedin.com/in/folashadeoluwaseun',
   },
   {
-    type: 'text',
-    name: 'Panelist TBC',
-    role: 'AI Practitioner',
-    linkedin: 'https://linkedin.com',
+    type: 'photo',
+    name: 'folashade Oroge',
+    role: 'Founder & CEO',
+    src: '/images/fola.jpg',
+    fallback: 'from-neutral-600 to-neutral-800',
   },
   {
     type: 'photo',
@@ -98,7 +98,7 @@ const ROW_2: SpeakerCard[] = [
   {
     type: 'text',
     name: 'Speaker TBC',
-    role: 'Founder & CEO',
+    role: 'ECOSYSTEM BUILDER',
     linkedin: 'https://linkedin.com',
   },
 ]
@@ -125,7 +125,9 @@ function TextCard({
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: '-40px' }}
-      className="flex h-[280px] flex-col justify-between rounded-2xl bg-[#EBEBEB] p-6 lg:h-[320px]"
+      whileHover={{ y: -5, boxShadow: '0 12px 32px rgba(0,0,0,0.12)' }}
+      transition={{ type: 'spring', stiffness: 300, damping: 24 }}
+      className="flex h-[280px] cursor-default flex-col justify-between rounded-2xl bg-[#EBEBEB] p-6 lg:h-[320px]"
     >
       {/* Top: name + role */}
       <div>
@@ -177,6 +179,8 @@ function PhotoCard({
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: '-40px' }}
+      whileHover={{ y: -5, boxShadow: '0 16px 40px rgba(0,0,0,0.35)' }}
+      transition={{ type: 'spring', stiffness: 300, damping: 24 }}
       className="group relative h-[280px] overflow-hidden rounded-2xl lg:h-[320px]"
     >
       <div className={`absolute inset-0 bg-gradient-to-b ${fallback}`} />
@@ -302,7 +306,7 @@ export default function SpeakersSection() {
         className="mx-auto mt-12 max-w-7xl"
       >
         <Link
-          href="#apply"
+          href="luma.com/w0wb5r1q"
           className="group inline-flex items-center gap-2.5 rounded-full border border-white/25 bg-transparent px-7 py-3.5 font-raleway text-sm font-medium text-white transition-all duration-300 hover:border-white/50 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
         >
           View All Speakers
