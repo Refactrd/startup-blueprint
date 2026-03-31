@@ -28,7 +28,7 @@ function InstagramSvg() {
 
 const NAV_LINKS = [
   { label: 'About',    href: '#about' },
-  { label: 'Apply',    href: 'luma.com/w0wb5r1q' },
+  { label: 'Apply',    href: "https://luma.com/w0wb5"},
   { label: 'Speakers', href: '#speakers' },
   { label: 'Schedule', href: '#schedule' },
   { label: 'Contact',  href: '#contact' },
@@ -99,7 +99,8 @@ export default function Footer() {
               </p>
 
               <Link
-                href="luma.com/w0wb5r1q"
+                href="https://luma.com/w0wb5"
+                target="_blank"
                 className="group relative mt-6 inline-flex items-center gap-2 overflow-hidden rounded-full bg-white px-8 py-3.5 font-raleway text-sm font-semibold text-brand-blue transition-all duration-300 hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-blue"
               >
                 <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-brand-blue/5 to-transparent transition-transform duration-700 group-hover:translate-x-full" aria-hidden="true" />
