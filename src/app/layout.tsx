@@ -5,7 +5,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: "Startup Blueprint | How Women Leaders Are Structuring the AI-Powered Generation of African Startups",
   description:
-    "An exclusive roundtable on April 25, 2026 in Yaba, Lagos. Discover how women leaders are structuring the AI-powered generation of African startups.",
+    "An exclusive roundtable on April 25, 2026 in Lagos, Nigeria. Discover how women leaders are structuring the AI-powered generation of African startups.",
   keywords: ['African startups', 'women in tech', 'AI', 'Lagos', 'startup event', 'roundtable'],
   openGraph: {
     title: "Startups Blueprint",

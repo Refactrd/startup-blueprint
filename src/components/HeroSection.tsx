@@ -212,7 +212,7 @@ export default function HeroSection() {
               April 25, 2026
             </span>
             <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
-              Yaba, Lagos
+              Lagos, Nigeria
             </span>
             <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
               Exclusive Roundtable
@@ -261,7 +261,7 @@ export default function HeroSection() {
             </span>
             <span className="text-white/30">·</span>
             <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
-              Yaba, Lagos
+              Lagos, Nigeria
             </span>
             <span className="text-white/30">·</span>
             <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
@@ -273,7 +273,7 @@ export default function HeroSection() {
             variants={fadeUp}
             className="font-syne-new font-extrabold text-white leading-[1] tracking-normal text-[96px]"
           >
-            Startups{" "}
+            Startups
             <span className="text-brand-blue relative inline-block">
               Blueprint
               <span className="absolute left-0 -bottom-1 w-full h-[10px] bg-brand-blue/40" />
