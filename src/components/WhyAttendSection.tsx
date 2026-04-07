@@ -18,33 +18,33 @@ const fadeUp = {
 const CARDS = [
   {
     number: '01',
-    label: 'REAL FRAMEWORKS FOR SCALE',
+    label: 'YOUR PERSONALISED AI SCORE',
     description:
-      'Walk away with practical AI and CX frameworks you can apply to your startup immediately. No theory. No fluff. Just structured implementation.',
+      'Walk away with a personalised AI Score for your organisation. Know exactly where you stand, what gaps exist, and what to fix first to unlock operational efficiency.',
     // Number bottom-left, text top-right
     layout: 'number-bl',
   },
   {
     number: '02',
-    label: 'HANDS-ON WORKSHOPS',
+    label: 'HANDS-ON IMPLEMENTATION WORKSHOPS',
     description:
-      'Participate in two expert-led implementation workshops designed to surface your gaps, clarify your priorities, and give you a defined direction for execution.',
+      'Participate in two expert-led workshops covering AI operations and customer experience design. Surface your gaps, clarify your priorities, and leave with a defined direction for execution.',
     // Number bottom-left, text top-right
     layout: 'number-bl',
   },
   {
     number: '03',
-    label: 'EXCLUSIVE ROUNDTABLE ACCESS',
+    label: 'BE PART OF A PUBLISHED CASE STUDY',
     description:
-      'Connect with growth-stage women founders, ecosystem partners, technology leaders, and implementation experts in an intentionally curated space.',
+      "Selected participants will be featured in the Startups Blueprint '26 Insights Report, a published case study documenting how women-led African startups are structuring for the AI-powered",
     // Number bottom-right, text top-left
     layout: 'number-br',
   },
   {
     number: '04',
-    label: 'YOUR STARTUP BLUEPRINT',
+    label: 'YOUR STARTUP IMPLEMENTATION PATHWAY',
     description:
-      'Leave with more than notes. Leave with a defined startup structure, a mapped implementation pathway, and a clear next step toward scalable execution.',
+      'Leave with access to a structured implementation track built for your startup. Choose from the Customer Experience Blueprint, the AI Startup Operations Blueprint, or both. Each pathway includes a startup audit, system design, an implementation roadmap, and full execution support.',
     // Number bottom-right, text top-left
     layout: 'number-br',
   },
@@ -91,7 +91,7 @@ function WhyCard({
 
       {/* ── Label — always top, positioned based on layout ── */}
       <p
-        className={`relative font-raleway text-[10px] font-bold uppercase tracking-[0.18em] text-white/50 transition-colors duration-300 group-hover:text-brand-blue/80 ${
+        className={`relative font-raleway text-[11px] font-bold uppercase tracking-[0.18em] text-white transition-colors duration-300 group-hover:text-brand-blue/80 ${
           isNumberRight ? 'self-start text-left' : 'self-start text-left'
         }`}
       >
@@ -100,11 +100,11 @@ function WhyCard({
 
       {/* ── Description text — opposite corner to number ── */}
       {isNumberRight ? (
-        <p className="relative mt-5 max-w-[55%] font-raleway text-[13px] leading-[1.75] text-white/60 transition-colors duration-300 group-hover:text-white/80 lg:text-[15px]">
+        <p className="relative mt-5 max-w-[55%] font-raleway text-[13px] leading-[1.75] text-white transition-colors duration-300 group-hover:text-white/80 lg:text-[14px]">
           {card.description}
         </p>
       ) : (
-        <p className="relative mt-5 max-w-[55%] self-end text-right font-raleway text-[13px] leading-[1.75] text-white/60 transition-colors duration-300 group-hover:text-white/80 lg:text-[15px]">
+        <p className="relative mt-5 max-w-[55%] self-end text-right font-raleway text-[13px] leading-[1.75] text-white transition-colors duration-300 group-hover:text-white/80 lg:text-[14px]">
           {card.description}
         </p>
       )}
@@ -161,7 +161,7 @@ export default function WhyAttendSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.55 }}
-            className="font-raleway text-[14px] leading-[1.8] text-brand-muted/55 lg:pt-3 lg:text-right"
+            className="font-raleway text-[14px] leading-[1.8] text-white lg:pt-3 lg:text-right"
           >
             Discover why Startups Blueprint is the must-attend event for women founders,
             operators, and decision makers building the next generation of African startups.
