@@ -72,7 +72,7 @@ const SESSIONS: Session[] = [
   {
     color: "yellow",
     title: "Arrival, Registration and Check-In",
-    time: "10:00 AM – 10:15 AM",
+    time: "9:00 AM – 9:15 AM",
     description:
       "Guest check-in and participant registration. Set the tone. You are not here to listen. You are here to build.",
     icon: (
@@ -88,7 +88,7 @@ const SESSIONS: Session[] = [
     color: "purple",
     title: "Opening Address — Setting the Blueprint",
     by: "Folashade Oroge, Event Host",
-    time: "10:15 AM – 10:20 AM",
+    time: "9:15 AM – 9:20 AM",
     description:
       "Why African startups stall at growth stage, why structure matters before scale, and what you will walk away with today.",
     image: "/images/fola.jpg",
@@ -106,7 +106,7 @@ const SESSIONS: Session[] = [
     title:
       "Keynote — How Women Leaders Are Structuring the Next Generation of African Startups",
     by: "Keynote Speaker TBC",
-    time: "10:20 AM – 10:35 AM",
+    time: "9:20 AM – 9:40 AM",
     description:
       "A strategic keynote exploring the future of AI-driven startups, the competitive power of customer experience, and what it takes to build globally relevant businesses from Africa.",
     icon: (
@@ -119,7 +119,7 @@ const SESSIONS: Session[] = [
     color: "blue",
     title: "Impact Panel — CX and AI Structures in African Startups",
     by: "Folashade Oroge, Panel Moderator",
-    time: "10:35 AM – 11:15 AM",
+    time: "9:40 AM – 10:20 AM",
     description:
       "A sharp, focused panel on the real challenges driving African startups toward AI-powered operations and structured CX, and the competitive advantages waiting on the other side. Live Q&A included.",
     image: "/images/fola.jpg",
@@ -135,7 +135,7 @@ const SESSIONS: Session[] = [
   {
     color: "grey",
     title: "Interactive Insight Session",
-    time: "11:15 AM – 11:30 AM",
+    time: "10:20 AM – 10:35 AM",
     description:
       "A game-structured, interactive session designed to capture ecosystem insights and personal startup context. Come ready to engage.",
     icon: (
@@ -151,7 +151,7 @@ const SESSIONS: Session[] = [
     color: "peach",
     title: "Workshop 1 — Designing Customer Experience for Scalable Startups",
     by: "Ibukun Odubiyi",
-    time: "11:30 AM – 12:00 PM",
+    time: "10:35 AM – 11:05 AM",
     description:
       "A hands-on workshop exploring how to design customer experience frameworks that hold up as your startup scales. Walk away with clarity on your CX gaps and a structure you can implement immediately.",
     image: "/images/ibukun.jpg",
@@ -166,7 +166,7 @@ const SESSIONS: Session[] = [
     color: "peach",
     title: "Workshop 2 — Operate or Fall Behind: Designing an AI-Powered Operation from the Ground Up",
     by: "Oyin Dawodu",
-    time: "12:05 PM – 12:35 PM",
+    time: "11:10 AM – 11:40 AM",
     description:
       "A hands on workshop for founders ready to build AI into their operations from the ground up. Assess your business functions, get your AI readiness score, and leave with a clear entry point to operate more competitively.",
     image: "/images/oyin.png",
@@ -184,7 +184,7 @@ const SESSIONS: Session[] = [
     color: "purple",
     title: "Collective Blueprint Mapping Session",
     by: "Organizing Team",
-    time: "12:45 PM – 1:15 PM",
+    time: "11:50 AM – 12:20 PM",
     description:
       "Synthesize your workshop insights, define your structure priorities, and map your startup's next move. This is where it all comes together.",
     icon: (
@@ -195,17 +195,46 @@ const SESSIONS: Session[] = [
     ),
   },
   {
-    color: "yellow",
-    title: "Implementation Pathway, Refreshments and Networking",
-    time: "1:15 PM – 2:00 PM",
+    color: "blue",
+    title: "Sponsors Session",
+    time: "12:20 PM – 12:40 PM",
     description:
-      "Sponsor showcase, implementation desk, audit slot confirmation, and the teams who will help you execute.",
+      "Hear from our sponsors and ecosystem partners. Discover the tools, platforms, and programmes built to support your next stage of growth.",
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <path d="M16 6C16 6 8 10 8 18c0 4 3.6 7 8 7s8-3 8-7c0-8-8-12-8-12Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+        <path d="M12 20c1 1.5 2.2 2 4 2s3-0.5 4-2" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+        <path d="M4 14h4M24 14h4M8 8l2.5 2.5M21.5 8l-2.5 2.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      </svg>
+    ),
+  },
+  {
+    color: "yellow",
+    title: "Implementation Pathway Guide — Your Startup's Next Move",
+    time: "12:40 PM – 1:15 PM",
+    description:
+      "The implementation program is introduced, audit slot confirmation, and the teams who will help you execute.",
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
         <path d="M6 14c0-6 4-10 10-10s10 4 10 10c0 4-2 7-5 9H11c-3-2-5-5-5-9Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
         <path d="M11 23v5h10v-5" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
         <path d="M13 28h6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
         <path d="M12 17l2.5 2.5L20 13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    color: "peach",
+    title: "Networking & Case Study Interviews",
+    time: "1:15 PM – 2:15 PM",
+    description:
+      "Connect with founders, operators, and ecosystem builders. Share your story, hear theirs, and leave with real relationships — and real insights from founders who have done it.",
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <circle cx="10" cy="9" r="4" stroke="currentColor" strokeWidth="1.8" />
+        <circle cx="22" cy="9" r="4" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M4 24c0-3.3 2.7-6 6-6h12c3.3 0 6 2.7 6 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <path d="M14 17h4M16 15v4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
       </svg>
     ),
   },
