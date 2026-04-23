@@ -134,7 +134,7 @@ const SESSIONS: Session[] = [
   {
     color: "yellow",
     title: "Keynote — How Women Leaders Are Structuring the Next Generation of African Startups",
-    by: "Keynote Speaker TBC",
+    by: "Ashley Immanuel",
     time: "10:30 AM – 10:50 AM",
     description:
       "A strategic keynote exploring the future of AI-driven startups, the competitive power of customer experience, and what it takes to build globally relevant businesses from Africa.",
