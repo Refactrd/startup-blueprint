@@ -1,8 +1,8 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useState } from 'react'
 
 // ─── Animation ─────────────────────────────────────────────────────────────
 
@@ -13,6 +13,17 @@ const fadeUp = {
     y: 0,
     transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const, delay: i * 0.07 },
   }),
+}
+
+const expandRow = {
+  hidden: { opacity: 0, y: 24, scale: 0.98 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const, delay: i * 0.08 },
+  }),
+  exit: { opacity: 0, y: -12, scale: 0.98, transition: { duration: 0.25 } },
 }
 
 // ─── Social icon SVGs ──────────────────────────────────────────────────────
@@ -48,6 +59,20 @@ type SpeakerCard =
 const ROW_1: SpeakerCard[] = [
   {
     type: 'text',
+    name: 'Ashley Immanuel',
+    role: 'Co-Founder & CEO',
+    company: 'Semicolon',
+    linkedin: 'https://www.linkedin.com/in/ashley-immanuel/',
+  },
+  {
+    type: 'photo',
+    name: 'Ashley Immanuel',
+    role: 'Co-Founder & CEO',
+    src: '/images/ashley.jpg',
+    fallback: 'from-neutral-600 to-neutral-800',
+  },
+  {
+    type: 'text',
     name: 'Ibukun Odubiyi',
     role: 'CX Strategist and Consultant',
     company: 'LoyalPartners',
@@ -60,6 +85,9 @@ const ROW_1: SpeakerCard[] = [
     src: '/images/ibukun.jpg',
     fallback: 'from-zinc-600 to-zinc-800',
   },
+]
+
+const ROW_2: SpeakerCard[] = [
   {
     type: 'text',
     name: 'Oyin Dawodu',
@@ -74,9 +102,24 @@ const ROW_1: SpeakerCard[] = [
     src: '/images/oyin.png',
     fallback: 'from-neutral-600 to-neutral-800',
   },
+
+  {
+    type: 'text',
+    name: 'Maureen Williams‑Ofurum',
+    company: 'TeKnowledge ',
+    role: 'Operations Manager',
+    linkedin: 'https://www.linkedin.com/in/maureenwilliams-ofurum/',
+  },
+  {
+    type: 'photo',
+    name: 'Maureen Williams‑Ofurum',
+    role: 'Operations Manager',
+    src: '/images/maureen.jpg',
+    fallback: 'from-neutral-600 to-neutral-800',
+  },
 ]
 
-const ROW_2: SpeakerCard[] = [
+const ROW_3: SpeakerCard[] = [
   {
     type: 'text',
     name: 'Folashade Oroge',
@@ -92,18 +135,18 @@ const ROW_2: SpeakerCard[] = [
     fallback: 'from-neutral-600 to-neutral-800',
   },
   {
-    type: 'photo',
-    name: 'Speaker TBC',
-    role: 'ECOSYSTEM BUILDER',
-    src: '/images/placeholder.jpg',
-    fallback: 'from-slate-600 to-slate-800',
+    type: 'text',
+    name: 'Tolu Olawumi',
+    role: 'Programs and Partnerships Lead',
+    company: '234finance',
+    linkedin: 'https://www.linkedin.com/in/tolulopeolawumi/',
   },
   {
-    type: 'text',
-    name: 'Speaker TBC',
-    role: 'ECOSYSTEM BUILDER',
-    company: 'TBC',
-    linkedin: 'https://linkedin.com',
+    type: 'photo',
+    name: 'Tolu Olawumi',
+    role: 'Programs and Partnerships Lead',
+    src: '/images/tolu.jpeg',
+    fallback: 'from-neutral-600 to-neutral-800',
   },
 ]
 
@@ -116,6 +159,7 @@ function TextCard({
   index,
   linkedin,
   instagram,
+  animVariant = 'scroll',
 }: {
   name: string
   role: string
@@ -123,14 +167,16 @@ function TextCard({
   index: number
   linkedin?: string
   instagram?: string
+  animVariant?: 'scroll' | 'expand'
 }) {
+  const motionProps =
+    animVariant === 'expand'
+      ? { custom: index, variants: expandRow, initial: 'hidden' as const, animate: 'visible' as const, exit: 'exit' as const }
+      : { custom: index, variants: fadeUp, initial: 'hidden' as const, whileInView: 'visible' as const, viewport: { once: true, margin: '-40px' } }
+
   return (
     <motion.div
-      custom={index}
-      variants={fadeUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: '-40px' }}
+      {...motionProps}
       whileHover={{ y: -5, boxShadow: '0 12px 32px rgba(0,0,0,0.12)' }}
       transition={{ type: 'spring', stiffness: 300, damping: 24 }}
       className="flex h-[280px] cursor-default flex-col justify-between rounded-2xl bg-[#EBEBEB] p-6 lg:h-[320px]"
@@ -174,20 +220,23 @@ function PhotoCard({
   src,
   fallback,
   index,
+  animVariant = 'scroll',
 }: {
   name: string
   role: string
   src: string
   fallback: string
   index: number
+  animVariant?: 'scroll' | 'expand'
 }) {
+  const motionProps =
+    animVariant === 'expand'
+      ? { custom: index, variants: expandRow, initial: 'hidden' as const, animate: 'visible' as const, exit: 'exit' as const }
+      : { custom: index, variants: fadeUp, initial: 'hidden' as const, whileInView: 'visible' as const, viewport: { once: true, margin: '-40px' } }
+
   return (
     <motion.div
-      custom={index}
-      variants={fadeUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: '-40px' }}
+      {...motionProps}
       whileHover={{ y: -5, boxShadow: '0 16px 40px rgba(0,0,0,0.35)' }}
       transition={{ type: 'spring', stiffness: 300, damping: 24 }}
       className="group relative h-[280px] overflow-hidden rounded-2xl lg:h-[320px]"
@@ -206,9 +255,44 @@ function PhotoCard({
   )
 }
 
+// ─── Helper to render a row of cards ──────────────────────────────────────
+
+function RowCards({ row, indexOffset, animVariant }: { row: SpeakerCard[]; indexOffset: number; animVariant: 'scroll' | 'expand' }) {
+  return (
+    <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+      {row.map((card, i) =>
+        card.type === 'text' ? (
+          <TextCard
+            key={card.name + i}
+            name={card.name}
+            role={card.role}
+            company={(card as Extract<SpeakerCard, { type: 'text' }>).company}
+            index={indexOffset + i}
+            linkedin={(card as Extract<SpeakerCard, { type: 'text' }>).linkedin}
+            instagram={(card as Extract<SpeakerCard, { type: 'text' }>).instagram}
+            animVariant={animVariant}
+          />
+        ) : (
+          <PhotoCard
+            key={card.name + i}
+            name={card.name}
+            role={card.role}
+            src={(card as Extract<SpeakerCard, { type: 'photo' }>).src}
+            fallback={(card as Extract<SpeakerCard, { type: 'photo' }>).fallback}
+            index={indexOffset + i}
+            animVariant={animVariant}
+          />
+        )
+      )}
+    </div>
+  )
+}
+
 // ─── Main component ────────────────────────────────────────────────────────
 
 export default function SpeakersSection() {
+  const [expanded, setExpanded] = useState(false)
+
   return (
     <section
       id="speakers"
@@ -255,77 +339,56 @@ export default function SpeakersSection() {
 
       {/* Card grid */}
       <div className="mx-auto max-w-7xl space-y-4">
-        {/* Row 1 */}
-        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-          {ROW_1.map((card, i) =>
-            card.type === 'text' ? (
-              <TextCard
-                key={card.name + i}
-                name={card.name}
-                role={card.role}
-                company={card.company}
-                index={i}
-                linkedin={(card as Extract<SpeakerCard, { type: 'text' }>).linkedin}
-                instagram={(card as Extract<SpeakerCard, { type: 'text' }>).instagram}
-              />
-            ) : (
-              <PhotoCard
-                key={card.name + i}
-                name={card.name}
-                role={card.role}
-                src={(card as Extract<SpeakerCard, { type: 'photo' }>).src}
-                fallback={(card as Extract<SpeakerCard, { type: 'photo' }>).fallback}
-                index={i}
-              />
-            )
-          )}
-        </div>
+        {/* Row 1 — always visible */}
+        <RowCards row={ROW_1} indexOffset={0} animVariant="scroll" />
+          <RowCards row={ROW_2} indexOffset={4} animVariant="scroll" />
 
-        {/* Row 2 */}
-        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-          {ROW_2.map((card, i) =>
-            card.type === 'text' ? (
-              <TextCard
-                key={card.name + i}
-                name={card.name}
-                role={card.role}
-                company={card.company}
-                index={i + 4}
-                linkedin={(card as Extract<SpeakerCard, { type: 'text' }>).linkedin}
-                instagram={(card as Extract<SpeakerCard, { type: 'text' }>).instagram}
-              />
-            ) : (
-              <PhotoCard
-                key={card.name + i}
-                name={card.name}
-                role={card.role}
-                src={(card as Extract<SpeakerCard, { type: 'photo' }>).src}
-                fallback={(card as Extract<SpeakerCard, { type: 'photo' }>).fallback}
-                index={i + 4}
-              />
-            )
+        {/* Rows 2 & 3 — revealed on expand */}
+        <AnimatePresence>
+          {expanded && (
+            <>
+              <RowCards row={ROW_3} indexOffset={8} animVariant="expand" />
+            </>
           )}
-        </div>
+        </AnimatePresence>
+
+        {/* Gradient fade-out when collapsed */}
+        {!expanded && (
+          <div
+            className="pointer-events-none relative -mt-20 h-28"
+            aria-hidden="true"
+            style={{ background: 'linear-gradient(to bottom, transparent, #1C1A1A)' }}
+          />
+        )}
       </div>
 
-      {/* CTA */}
+      {/* Toggle button */}
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.2, duration: 0.5 }}
-        className="mx-auto mt-12 max-w-7xl"
+        className={`mx-auto flex max-w-7xl ${expanded ? 'mt-10' : 'mt-0'}`}
       >
-        <Link
-          href="https://luma.com/w0wb5r1q"
-          target="_blank"
-          className="group inline-flex items-center gap-2.5 rounded-full border border-white/25 bg-transparent px-7 py-3.5 font-raleway text-sm font-medium text-white transition-all duration-300 hover:border-white/50 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
+        <button
+          type="button"
+          onClick={() => setExpanded((v) => !v)}
+          aria-expanded={expanded}
+          className="group relative inline-flex items-center gap-2.5 overflow-hidden rounded-full border border-white/25 bg-transparent px-7 py-3.5 font-raleway text-sm font-medium text-white transition-all duration-300 hover:border-white/50 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
         >
-          View All Speakers
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-            <path d="M2.5 11.5L11.5 2.5M11.5 2.5H5M11.5 2.5V9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </Link>
+          <span>{expanded ? 'Show Less' : 'View All Speakers'}</span>
+          <motion.svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            aria-hidden="true"
+            animate={{ rotate: expanded ? 180 : 0 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <path d="M3 6L8 11L13 6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+          </motion.svg>
+        </button>
       </motion.div>
     </section>
   )

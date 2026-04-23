@@ -31,7 +31,7 @@ const SPEAKERS = [
     title: 'CX Strategist and Consultant',
     company: 'LoyalPartners',
     date: 'April 25, 2026',
-    time: 'Workshop · 10:35 AM – 11:05 AM',
+    time: 'Workshop · 11:00 AM – 11:45 AM',
     src: '/images/ibukun.jpg',
     fallbackBg: 'bg-rose-900',
   },
@@ -40,10 +40,10 @@ const SPEAKERS = [
     title: 'AI Operations Lead',
     company: 'Refactrd',
     date: 'April 25, 2026',
-    time: 'Workshop · 11:10 AM – 11:40 AM',
+    time: 'Workshop · 12:05 PM – 12:50 PM',
     src: '/images/oyin.png',
     fallbackBg: 'bg-indigo-900',
-  },
+  }
 ]
 
 // ─── Component ─────────────────────────────────────────────────────────────
