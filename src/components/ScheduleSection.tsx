@@ -87,11 +87,11 @@ const SESSIONS: Session[] = [
   {
     color: "purple",
     title: "Opening Address — Setting the Blueprint",
-    by: "Oyin Dawodu, Co-organiser of Startups Blueprint",
+    by: "Folashade Oroge, Event Host",
     time: "9:00 AM – 9:20 AM",
     description:
       "Why African startups stall at growth stage, why structure matters before scale, and what you will walk away with today.",
-    image: "/images/oyin.png",
+    image: "/images/fola.jpg",
   },
   {
     color: "blue",
