@@ -186,7 +186,7 @@ export default function PartnershipSection() {
               Ready to partner?
             </p>
             <p className="mt-1 font-syne text-[20px] font-extrabold text-white sm:text-[24px]">
-              Let's build something meaningful together.
+              Let&apos;s build something meaningful together.
             </p>
           </div>
 

@@ -1,4 +1,5 @@
 import Navbar from '@/components/Navbar'
+import AnnouncementTicker from '@/components/AnnouncementTicker'
 import HeroSection from '@/components/HeroSection'
 import AboutSection from '@/components/AboutSection'
 import LogoStrip from '@/components/LogoStrip'
@@ -14,6 +15,7 @@ export default function HomePage() {
   return (
     <main>
       <Navbar />
+      <AnnouncementTicker href="https://beacon.by/startups-blueprint/casestudy" />
       <HeroSection />
       <LogoStrip/>
       <AboutSection/>

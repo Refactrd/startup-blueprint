@@ -53,3 +53,18 @@ body {
 .nav-overlay.open {
   pointer-events: auto;
 }
+
+/* Announcement ticker */
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.ticker-track {
+  animation: ticker-scroll 22s linear infinite;
+  width: max-content;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
